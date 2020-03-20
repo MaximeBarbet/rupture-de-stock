@@ -2,16 +2,23 @@
 
 // Config vars
 // Kaldi logo brand color: #FD461E
-$kaldi-red: #D64000
+$kaldi-red: #e74c3c
 $kaldi-red-invert: #fff
 
 $primary: $kaldi-red
 $primary-invert: $kaldi-red-invert
 $body-color: #333
 $black: #2b2523
+$navbar-item-hover-color: $kaldi-red
 
-.navbar .navbar-menu
-  box-shadow:none !important
+
+$family-sans-serif: "Montserrat", Arial, sans-serif
+$footer-background-color: #f5f5f5
+$footer-padding: 20px 30px
+
+// .navbar .navbar-menu
+//  box-shadow:none !important
+//  padding-left: 2em
 
 .content .taglist
   list-style: none
@@ -73,6 +80,8 @@ $black: #2b2523
 
 .navbar-item .icon
   color: $primary
+.navbar-item.active
+  color: $primary
 // Override for use of svg's from https://simpleicons.org/
 .icon svg
   width: 1.5rem
@@ -80,9 +89,6 @@ $black: #2b2523
   fill: currentColor
 .navbar-brand .navbar-item.logo
   padding: 0 1rem
-footer.footer
-  padding: 3rem 0rem 0rem
-  background-color: transparent
 
 //Menu overrides
 $menu-item-color: $white-ter
@@ -112,16 +118,39 @@ $menu-label-color: $white-ter
     vertical-align: middle
     display: inline
 
-// blog roll
-.blog-list-item.is-featured
+// article roll
+.article-list-item.is-featured
   background-color: #d6400033;
-.blog-list-item header
+.article-list-item header
   display: flex;
   margin-bottom: 1em;
-.blog-list-item .featured-thumbnail
+.article-list-item .featured-thumbnail
+  position: relative;
   flex-basis: 35%;
   margin: 0 1.5em 0 0;
-
+.overlay
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  background-color: #008CBA;
+  overflow: hidden;
+  width: 100%;
+  height: 0
+  transition: .5s ease;
+.featured-thumbnail:hover .overlay
+  bottom: 0;
+  height: 100%
+.text
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
 
 @import "~bulma"
 

@@ -5,13 +5,13 @@ import facebook from '../img/social/facebook.svg'
 const Footer = class extends React.Component {
   render() {
     return (
-      <footer className="footer has-background-black has-text-white-ter">
+      <footer className="footer">
         <div className="content has-text-centered">
           <p>
             © Copyright 2018 - 2020 Compagnie Rupture de Stock
           </p>
           <div className="social">
-            <a title="facebook" href="https://fr-fr.facebook.com/theatre.handicap/" target="_blank">
+            <a title="facebook" href="https://fr-fr.facebook.com/theatre.handicap/" target="_blank" rel="noopener noreferrer">
               <img
                 src={facebook}
                 alt="Facebook"
